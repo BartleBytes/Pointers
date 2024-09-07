@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "g++ build active file",
+            "type": "shell",
+            "command": "/usr/bin/g++", // Adjust this if your g++ path is different
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${pointers}/${main}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task for compiling C++ files."
+        }
+    ]
+}
